@@ -5,11 +5,11 @@ export const NavBar = () => {
 
   return (
     <nav className="bg-slate-900 p-4 text-white">
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <div className="text-2xl font-bold tracking-wide">
           <a href="/">
             Hanzee
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-400 to-purple-600">
+            <span className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
               Labs
             </span>
           </a>
@@ -17,11 +17,13 @@ export const NavBar = () => {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden focus:outline-none"
+          className="focus:outline-none md:hidden"
+          aria-label="Menu desplegable"
+          aria-expanded={isOpen}
         >
           {isOpen ? (
             <svg
-              className="w-8 h-8"
+              className="h-8 w-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -35,7 +37,7 @@ export const NavBar = () => {
             </svg>
           ) : (
             <svg
-              className="w-8 h-8"
+              className="h-8 w-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -50,52 +52,52 @@ export const NavBar = () => {
           )}
         </button>
 
-        <ul className="hidden md:flex gap-6 items-center">
-          <li className="hover:text-blue-400 cursor-pointer transition">
+        <ul className="hidden items-center gap-6 md:flex">
+          <li className="cursor-pointer transition hover:text-blue-400">
             <a href="#servicios">Servicios</a>
           </li>
-          <li className="hover:text-blue-400 cursor-pointer transition">
+          <li className="cursor-pointer transition hover:text-blue-400">
             <a href="#nosotros">Quienes somos</a>
           </li>
-          <li className="hover:text-blue-400 cursor-pointer transition">
+          <li className="cursor-pointer transition hover:text-blue-400">
             <a href="#faq">Preguntas Frecuentes</a>
           </li>
-          <li className="hover:text-blue-400 cursor-pointer transition">
-            <a href="#contacto">Contacto</a>
+          <li className="cursor-pointer transition hover:text-blue-400">
+            <a href="#contactso">Contacto</a>
           </li>
-          <li className="bg-linear-to-r from-blue-500 to-purple-600 px-5 py-2 rounded hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 cursor-pointer shadow-md">
+          <li className="transform cursor-pointer rounded bg-linear-to-r from-blue-500 to-purple-600 px-5 py-2 shadow-md transition-all duration-300 hover:scale-105 hover:from-blue-600 hover:to-purple-700">
             <a href="#cotizar">Solicitar Cotización</a>
           </li>
         </ul>
       </div>
 
       {isOpen && (
-        <div className="md:hidden mt-4 space-y-4 bg-slate-800 p-4 rounded-lg">
+        <div className="mt-4 space-y-4 rounded-lg bg-slate-800 p-4 md:hidden">
           <a
             href="#servicios"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-blue-400 transition"
+            className="block transition hover:text-blue-400"
           >
             Servicios
           </a>
           <a
             href="#nosotros"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-blue-400 transition"
+            className="block transition hover:text-blue-400"
           >
             Quienes somos
           </a>
           <a
             href="#faq"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-blue-400 transition"
+            className="block transition hover:text-blue-400"
           >
             Preguntas Frecuentes
           </a>
           <a
             href="#contacto"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-blue-400 transition"
+            className="block transition hover:text-blue-400"
           >
             Contacto
           </a>
@@ -103,7 +105,7 @@ export const NavBar = () => {
           <div onClick={() => setIsOpen(false)}>
             <a
               href="#cotizar"
-              className="block w-full text-center bg-linear-to-r from-blue-500 to-purple-600 py-2 rounded hover:from-blue-600 hover:to-purple-700 transition"
+              className="block w-full rounded bg-linear-to-r from-blue-500 to-purple-600 py-2 text-center transition hover:from-blue-600 hover:to-purple-700"
             >
               Solicitar Cotización
             </a>
