@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,12 +9,12 @@ export const NavBar = () => {
       <nav className="bg-slate-900 p-4 text-white">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold tracking-wide">
-            <a href="/">
+            <Link to="/">
               Hanzee
               <span className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Labs
               </span>
-            </a>
+            </Link>
           </div>
 
           <button
@@ -55,61 +56,61 @@ export const NavBar = () => {
 
           <ul className="hidden items-center gap-6 md:flex">
             <li className="cursor-pointer transition hover:text-blue-400">
-              <a href="#servicios">Servicios</a>
+              <Link to="/servicios">Servicios</Link>
             </li>
             <li className="cursor-pointer transition hover:text-blue-400">
-              <a href="#nosotros">Quienes somos</a>
+              <Link to="/nosotros">Quienes somos</Link>
             </li>
             <li className="cursor-pointer transition hover:text-blue-400">
-              <a href="#faq">Preguntas Frecuentes</a>
+              <Link to="/faq">Preguntas Frecuentes</Link>
             </li>
             <li className="cursor-pointer transition hover:text-blue-400">
-              <a href="#contactso">Contacto</a>
+              <Link to="/contacto">Contacto</Link>
             </li>
             <li className="transform cursor-pointer rounded bg-linear-to-r from-blue-500 to-purple-600 px-5 py-2 shadow-md transition-all duration-300 hover:scale-105 hover:from-blue-600 hover:to-purple-700">
-              <a href="#cotizar">Solicitar Cotización</a>
+              <Link to="/cotizar">Solicitar Cotización</Link>
             </li>
           </ul>
         </div>
 
         {isOpen && (
           <div className="mt-4 space-y-4 rounded-lg bg-slate-800 p-4 md:hidden">
-            <a
-              href="#servicios"
+            <Link
+              to="/servicios"
               onClick={() => setIsOpen(false)}
               className="block transition hover:text-blue-400"
             >
               Servicios
-            </a>
-            <a
-              href="#nosotros"
+            </Link>
+            <Link
+              to="/nosotros"
               onClick={() => setIsOpen(false)}
               className="block transition hover:text-blue-400"
             >
               Quienes somos
-            </a>
-            <a
-              href="#faq"
+            </Link>
+            <Link
+              to="/faq"
               onClick={() => setIsOpen(false)}
               className="block transition hover:text-blue-400"
             >
               Preguntas Frecuentes
-            </a>
-            <a
-              href="#contacto"
+            </Link>
+            <Link
+              to="/contacto"
               onClick={() => setIsOpen(false)}
               className="block transition hover:text-blue-400"
             >
               Contacto
-            </a>
+            </Link>
 
             <div onClick={() => setIsOpen(false)}>
-              <a
-                href="#cotizar"
+              <Link
+                to="/cotizar"
                 className="block w-full rounded bg-linear-to-r from-blue-500 to-purple-600 py-2 text-center transition hover:from-blue-600 hover:to-purple-700"
               >
                 Solicitar Cotización
-              </a>
+              </Link>
             </div>
           </div>
         )}

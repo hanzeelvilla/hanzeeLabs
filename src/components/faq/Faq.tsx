@@ -1,3 +1,3 @@
 export const Faq = () => {
-  return <div>Preguntas Frecuentes</div>;
+  return <div className="text-white">Preguntas Frecuentes</div>;
 };

@@ -1,5 +1,5 @@
-import { Hero } from "./components/home/Hero";
-import { NavBar } from "./components/shared/NavBar";
+import { Outlet } from "react-router-dom";
+import { NavBar } from "./components/shared/components/NavBar";
 
 export const App = () => {
   return (
@@ -7,7 +7,7 @@ export const App = () => {
       <NavBar />
 
       <main className="flex flex-1 flex-col">
-        <Hero />
+        <Outlet />
       </main>
     </div>
   );

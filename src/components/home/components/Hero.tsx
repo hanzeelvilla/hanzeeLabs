@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Hero = () => {
   return (
     <div className="flex flex-1 flex-col items-center justify-center px-6 text-center text-white">
@@ -36,12 +38,18 @@ export const Hero = () => {
       </div>
 
       <div className="mt-12 flex w-full flex-col gap-4 px-4 md:w-auto md:flex-row">
-        <button className="w-full cursor-pointer rounded-full border border-slate-600 px-8 py-3 font-semibold text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-white hover:shadow-lg md:w-auto">
+        <Link
+          to="/servicios"
+          className="w-full cursor-pointer rounded-full border border-slate-600 px-8 py-3 font-semibold text-slate-300 transition-all duration-300 hover:bg-slate-800 hover:text-white hover:shadow-lg md:w-auto"
+        >
           Servicios
-        </button>
-        <button className="w-full cursor-pointer rounded-full bg-linear-to-r from-blue-600 to-purple-600 px-8 py-3 font-bold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:w-auto">
+        </Link>
+        <Link
+          to="/cotizar"
+          className="w-full cursor-pointer rounded-full bg-linear-to-r from-blue-600 to-purple-600 px-8 py-3 font-bold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:w-auto"
+        >
           Solicitar Cotización
-        </button>
+        </Link>
       </div>
     </div>
   );
