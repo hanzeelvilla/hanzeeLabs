@@ -7,14 +7,14 @@ export const Hero = () => {
           Labs
         </span>
       </h1>
-      <p className="text-xl font-light text-gray-300 md:max-w-2xl md:text-3xl">
+      <p className="md:max-w text-xl font-light text-gray-300 md:text-3xl">
         Damos vida a tus ideas con{" "}
         <span className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text font-bold text-transparent">
           Diseño e Impresión 3D
         </span>
       </p>
 
-      <div className="flex flex-col items-center justify-center gap-4 text-sm font-medium text-slate-400 md:flex-row md:gap-8 md:text-lg">
+      <div className="mt-4 flex flex-col items-center justify-center gap-4 text-sm font-medium text-slate-400 md:flex-row md:gap-8 md:text-lg">
         <p className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-blue-500"></span>
           Prototipado Rápido y Diseño a Medida
