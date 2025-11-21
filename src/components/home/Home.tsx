@@ -1,5 +1,6 @@
-import { Hero } from "./components/Hero";
+// import { Hero } from "./components/Hero";
 
 export const Home = () => {
-  return <Hero />;
+  // return <Hero />;
+  return <h1>Hola mundo</h1>;
 };
