@@ -5,8 +5,8 @@ export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex flex-wrap items-center bg-slate-900 p-4 text-white">
-      <div className="mr-auto text-2xl font-bold tracking-wide">
+    <header className="flex flex-wrap items-center bg-transparent p-4 text-white">
+      <div className="mr-auto hidden text-2xl font-bold tracking-wide md:block">
         <Link to="/">
           Hanzee
           <span className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -17,7 +17,7 @@ export const NavBar = () => {
 
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="focus:outline-none md:hidden"
+        className="ml-auto focus:outline-none md:hidden"
         aria-label="Menu desplegable"
         aria-expanded={isOpen}
       >
@@ -73,7 +73,15 @@ export const NavBar = () => {
       </nav>
 
       {isOpen && (
-        <nav className="mt-4 w-full space-y-4 rounded-lg bg-slate-800 p-4 md:hidden">
+        <nav className="mt-4 w-full space-y-4 rounded-lg border border-slate-700 bg-transparent p-4 md:hidden">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="block transition hover:text-blue-400"
+          >
+            Inicio
+          </Link>
+
           <Link
             to="/servicios"
             onClick={() => setIsOpen(false)}

@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.tsx";
-import { Home } from "./components/home/Home.tsx";
+import { Home } from "./home/Home.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Services } from "./components/services/Services.tsx";
-import { About } from "./components/about/About.tsx";
-import { Faq } from "./components/faq/Faq.tsx";
-import { Contact } from "./components/contact/Contact.tsx";
-import { Estimate } from "./components/estimate/Estimate.tsx";
+import { Services } from "./services/Services.tsx";
+import { About } from "./about/About.tsx";
+import { Faq } from "./faq/Faq.tsx";
+import { Contact } from "./contact/Contact.tsx";
+import { Estimate } from "./estimate/Estimate.tsx";
 
 const router = createBrowserRouter([
   {
