@@ -8,7 +8,6 @@ export const Home = () => {
       <section className="px-6 py-16">
         <YouTubeVideo
           videoId="k9iYm9PEAHg"
-          title="La victoria dulce por la banda de tontos"
         />
       </section>
     </>

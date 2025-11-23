@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <div className="flex flex-col items-center gap-2 md:items-start">
           <p className="text-sm font-medium">&copy; {currentYear} HanzeeLabs</p>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-400">
             Diseñado y construido con pasión por la impresión 3D.
           </p>
         </div>
