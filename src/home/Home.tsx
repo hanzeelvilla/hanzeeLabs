@@ -6,9 +6,7 @@ export const Home = () => {
     <>
       <Hero />
       <section className="px-6 py-16">
-        <YouTubeVideo
-          videoId="k9iYm9PEAHg"
-        />
+        <YouTubeVideo videoId="k9iYm9PEAHg" />
       </section>
     </>
   );

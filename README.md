@@ -20,3 +20,4 @@
 
 - [ ] Find a library to display YouTube videos without accessibility problems
 - [ ] Componentize the Home and navBar
+- [ ] Button to change languages
