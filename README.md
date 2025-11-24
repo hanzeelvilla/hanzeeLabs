@@ -2,19 +2,19 @@
 
 ## To-Do
 
-- [ ] 3 Pages
+- [x] 3 Pages
 - [x] Regions Header, nav, main and footer
-- [ ] 2 Heading levels
-- [ ] 2 paragraphs per heading level
+- [x] 2 Heading levels
+- [x] 2 paragraphs per heading level
 - [x] 2 Links
-- [ ] Decorative images
-- [ ] Non-decorative images
+- [x] Decorative images
+- [x] Non-decorative images
 - [ ] 1 Video with CC and AD
-- [ ] 1 Form with 3 fields
-- [ ] 0 Errors in Silktide
+- [x] 1 Form with 3 fields
+- [x] 0 Errors in Silktide
 - [ ] Full keyboard access
-- [ ] Correct focus order
-- [ ] Focus visible
+- [x] Correct focus order
+- [x] Focus visible
 
 ## Future Improvements
 
