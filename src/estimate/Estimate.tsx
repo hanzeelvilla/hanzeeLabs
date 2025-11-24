@@ -141,18 +141,45 @@ export const Estimate = () => {
                       >
                         Cantidad de piezas
                       </label>
-                      <input
-                        type="number"
-                        id="quantity"
-                        min={1}
-                        value={formData.quantity}
-                        onChange={(e) =>
-                          updateData({
-                            quantity: parseInt(e.target.value) || 1,
-                          })
-                        }
-                        className="w-full rounded-lg border border-slate-700 bg-slate-950 p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
-                      />
+                      <div className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          aria-label="Disminuir cantidad"
+                          onClick={() =>
+                            updateData({
+                              quantity: Math.max(1, formData.quantity - 1),
+                            })
+                          }
+                          className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-slate-700"
+                        >
+                          –
+                        </button>
+
+                        <input
+                          id="quantity"
+                          inputMode="numeric"
+                          pattern="\d*"
+                          value={String(formData.quantity)}
+                          onChange={(e) => {
+                            const parsed = parseInt(e.target.value, 10);
+                            updateData({
+                              quantity: isNaN(parsed) ? 1 : Math.max(1, parsed),
+                            });
+                          }}
+                          className="flex-1 rounded-lg border border-slate-700 bg-slate-950 p-3 text-center text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+                        />
+
+                        <button
+                          type="button"
+                          aria-label="Aumentar cantidad"
+                          onClick={() =>
+                            updateData({ quantity: formData.quantity + 1 })
+                          }
+                          className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-slate-700"
+                        >
+                          +
+                        </button>
+                      </div>
                     </div>
 
                     <div className="space-y-2 md:col-span-2">
@@ -176,7 +203,7 @@ export const Estimate = () => {
                       />
                       <p className="mt-1 text-xs text-slate-500">
                         {formData.files && formData.files.length > 0
-                          ? `✅ ${formData.files.length} archivos seleccionados`
+                          ? `${formData.files.length} archivos seleccionados`
                           : "Máximo 50MB por archivo."}
                       </p>
                     </div>
@@ -272,12 +299,10 @@ export const Estimate = () => {
                   </div>
                 </section>
 
-                {/* BOTÓN DE ENVÍO */}
                 <div className="pt-4">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    // Corregido: bg-gradient
                     className="w-full rounded-xl bg-linear-to-r from-blue-600 to-purple-600 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:scale-[1.01] hover:from-blue-500 hover:to-purple-500 hover:shadow-blue-500/25 disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {isSubmitting ? (
