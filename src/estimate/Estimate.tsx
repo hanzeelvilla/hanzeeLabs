@@ -218,7 +218,6 @@ export const Estimate = () => {
                       <textarea
                         id="description"
                         rows={3}
-                        placeholder="Ej: Color negro mate, relleno al 20%, es para exteriores..."
                         value={formData.description}
                         onChange={(e) =>
                           updateData({ description: e.target.value })
