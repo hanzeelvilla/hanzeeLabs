@@ -1,4 +1,4 @@
-export type serviceType = "print" | "design" | null;
+export type serviceType = "print" | null;
 
 export type material = "pla" | "petg" | "abs" | "tpu" | null;
 
