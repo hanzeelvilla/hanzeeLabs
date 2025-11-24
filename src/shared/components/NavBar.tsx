@@ -7,7 +7,7 @@ export const NavBar = () => {
   return (
     <header className="flex flex-wrap items-center bg-transparent p-4 text-white">
       <div className="mr-auto hidden text-2xl font-bold tracking-wide md:block">
-        <Link to="/">
+        <Link to="/" aria-label="Inicio">
           Hanzee
           <span className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
             Labs

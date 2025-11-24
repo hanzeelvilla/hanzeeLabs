@@ -1,6 +1,6 @@
 export type serviceType = "print" | "design" | null;
 
-export type material = "pla" | "petg" | "abs" | "tpu";
+export type material = "pla" | "petg" | "abs" | "tpu" | null;
 
 export type contact = {
   name: string;
